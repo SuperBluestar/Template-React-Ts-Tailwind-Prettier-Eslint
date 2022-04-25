@@ -4,6 +4,13 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import AppRoutes from './AppRoutes';
 import reportWebVitals from './reportWebVitals';
+import { compose } from 'redux';
+
+declare global {
+  interface Window {
+    __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
+  }
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
